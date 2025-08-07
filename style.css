@@ -7,33 +7,40 @@
 a{
   text-decoration: none;
 }
-.top-bar{
-    width:1440px;
-    height:75px;
-    background-color: #ffffff;
-    display: flex;
-    border-bottom: 1px solid #8B96A5;
+body{
+  background-color: #F7FAFC;
 }
+/*----------------------------top bar-----------------------------------*/
+.top-bar{
+  width:1440px;
+  height:75px;
+  display: flex;
+  background-color: #ffffff;
+  border-bottom: 1px solid #DEE2E7;
+}
+/* ----------logo---------- */
 .logo{
-    display: flex;
-    align-items: center;
-    width:150px;
-    height:40px;
-    margin-left:115px;
-    margin-top: 20px;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  width:150px;
+  height:40px;
+  margin-left:115px;
+  margin-top: 20px;
+}
+.logo:hover{
+  margin-top: 15px;
+  height:45px;
 }
 .brand-logo {
   height: 40px;
-  width: auto;
 }
 .brand-name{
-    color: #8cb7f5;
-    font-size: 23px;
-    font-weight: bold;
-    font-family:Arial, Helvetica, sans-serif;
-    margin-left: 5px;
+  color: #8cb7f5;
+  font-size: 23px;
+  font-weight: bold;
+  margin-left: 5px;
 }
+/* ----------search bar---------- */
 .search-form {
   display: flex;
   align-items: center;
@@ -45,30 +52,30 @@ a{
   border-radius: 8px;
   overflow: hidden;
 }
-
+.search-form:hover{
+  border: 2px solid #0D6EFD;
+  margin-left: 18.5px;
+}
 #search {
   width: 100%;
   height: 100%;
   padding: 0 12px;
   border: none;
-  border-right: 1px solid #ccc;
-  outline: none;
   font-size: 16px;
-  flex: 1;
+  flex: 1 1 auto;
 }
-
 .search-select {
   width: 125px;
   height: 100%;
   border: none;
-  border-left: 1px solid #0067FF ;
-  outline: none;
+  border-left: 1px solid #0067FF;
   padding: 0 10px;
   font-size: 14px;
-  background-color: white;
   flex-shrink: 0;
 }
-
+.search-select:hover{
+  background-color: #EFF2F4;
+}
 .search-button {
   width: 88px;
   height: 100%;
@@ -79,69 +86,178 @@ a{
   font-size: 14px;
   flex-shrink: 0;
 }
+.search-button:hover{
+  background: linear-gradient(40deg, #127FFF 0%, #0067FF 100%);
+}
+/*-------quick actions--------*/
 .actions {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   margin-left: 80px;
 }
-
 .actions a {
   margin-top: 20px;
+  height: 40px;
+  font-size: 12px;
+  color: #8B96A5;
   display: flex;
   flex-direction: column; 
   align-items: center;
   justify-content: center;
-  
-  height: 41px;
-  text-decoration: none;
-  color: #8B96A5;
-  font-family: Inter;
-font-weight: 400;
-font-style: Regular;
-font-size: 12px;
-
-line-height: 100%;
-letter-spacing: 0px;
-text-align: center;
-vertical-align: middle;
-
+  text-align: center;
+  vertical-align: middle;
 }
-
+.actions a:hover{
+  margin-top: 15px;
+  height:45px;
+}
 .actions a img {
   width: 20px;
   height: 20px;
   margin-bottom: 4px; 
 }
-.navbar{
-  width:1440px;
-  height:50px;
+/*----------------------------nav bar-----------------------------------*/
+.navbar {
+  width: 1440px;
+  height: 50px;
   background-color: #ffffff;
+  border-bottom: 1px solid #DEE2E7;
   display: flex;
-  border-bottom: 1px solid #8B96A5;
-}
-nav ul {
-  display: flex;          
-  align-items: center;     
-  gap: 20px;               
-  list-style: none;        
-  padding: 0;
-  margin: 0;
+  justify-content: center;
+  align-items: center;
 }
 
-nav li {
-  font-size: 14px;
+.nav-container {
+  width: 100%;
+  padding-left: 115px;
+  padding-right: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-nav select {
-  padding: 4px 6px;
-  font-size: 14px;
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
 }
-/* ------------footer css --------------*/
+
+.nav-links li a {
+  font-size: 16px;
+  color: #1c1c1c;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li a:hover{
+  color:#606060;
+}
+.navbar select:hover {
+  color:#606060;
+}
+.nav-links li a img {
+  margin-right: 8px;
+}
+
+.nav-links li select {
+  font-size: 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.selects {
+  display: flex;
+  align-items: center;
+}
+
+.selects select {
+  font-size: 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  margin-right: 30px;
+}
+/* -----------------------------------------------------------------main -------------------------------------------------*/
+
+/* ------------------------------main-section ------------------------------*/
+.main-section{
+  margin:20px 115px;
+  padding: 20px;
+  background-color: #ffffff;
+  border:1px solid #DEE2E7;
+  border-radius: 6px;
+  height:360px;
+  display: flex;
+  gap:10px;
+}
+.main-categories ul{
+  list-style: none;
+}
+.main-categories ul li a{
+  font-size: 16px;
+  color: #505050;
+  font-weight: 400;
+  display: block;
+  height: 40px;
+  width: 200px;
+  align-content: center;
+  border-radius: 6px;
+  overflow: hidden;
+  padding-left: 10px;
+}
+.main-categories ul li a:hover{
+  background-color: #E5F1FF;
+  font-weight: 500;
+  color:#1c1c1c;
+}
+.main-banner{
+  background-image: url('Asserts/main-banner-bg.png');
+  background-size:cover;
+  background-position: center;
+  width:665px;
+  height:360px;
+}
+.main-user{
+ display:flex;
+ flex-direction: column;
+ gap:10px;
+ width:200px;
+}
+.user-account{
+  display:flex;
+  flex-direction: column;
+  height:150px;
+  background-color: #E3F0FF;
+  border-radius: 6px;
+}
+.discount{
+  background-color: #F38332;
+  color:#ffffff;
+  border-radius: 6px;
+  font-size: 16px;
+  height:100px;
+  padding: 20px;
+  align-content: center;
+}
+.quotes{
+  background-color: #55BDC3;
+  color:#ffffff;
+  font-size: 16px;
+  border-radius: 6px;
+  height:100px;
+  padding: 20px;
+  align-content: center;
+}
+/* ------------------------------footer ------------------------------*/
 footer {
+  background-color: #ffffff;
   max-width: 1440px;
+  width:100%;
   min-height: 324px;
   font-size: 16px;
-  
 }
 
 .footer-container {
@@ -171,7 +287,6 @@ footer {
   color: #505050;
   margin: 15px 10px 15px 0px;
   line-height: 24px;
-  
 }
 
 .footer-column ul {
@@ -184,69 +299,82 @@ footer {
   display:flex;
 }
 
-
 .footer-column ul li a {
   color: #8B96A5;
-  text-decoration: none;
   font-size: 14px;
 }
-
-.footer-column ul li a:hover {
-  color: #fff;
+.footer-column ul li a:hover{
+  color: #505050;
 }
 #footer-logo{
   margin-left:0px;
-  margin-top: 0px;
+  margin-top: 5px;
 }
-/* Social Icons */
+#footer-logo:hover{
+  margin-top: 0px;
+  height:45px
+}
 .social-logo {
   width: 32px;
   height: 32px;
   margin-right: 10px;
 }
-
+.social-logo:hover{
+  width: 30px;
+  height: 30px;
+  margin-right: 12px;
+}
 .footer-column ul li a img.social-logo {
   vertical-align: middle;
 }
 
-/* App Store / Play Store logos */
 .app-logo {
   width: 120px;
-  height: auto;
+  height: 40px;
   margin-bottom: 10px;
 }
-
-/* Fix double anchor issue */
+.app-logo:hover{
+  width: 118px;
+  height: 38px;
+  margin-bottom: 12px;
+}
 .footer-column ul li a a {
   display: inline-block;
   pointer-events: none;
 }
-
-.copyright-container{
-  color:#606060;
-  background-color: #DEE2E7;
-  width:100%;
-  max-width: 1440px;
-  height:68px;
+/* ---------------------------copyright bar ------------------------------ */
+.copyright-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  padding: 0px;
-  padding-left: 115px;
-}
-.copyright-column {
-  flex: 1 1 auto;
-  margin:20px;
+  background-color: #EFF2F4;
+  border-top: 1px solid #DEE2E7;
+  height: 68px;
+  padding: 0 115px;
+  max-width: 1440px;
+  margin: auto;
+  color: #606060;
 }
 
-.copyright-container select {
+.copyright-text {
+  margin: 0;
+  font-size: 14px;
+}
+
+.language-select {
   border: none;
-  color:#606060;
   background: transparent;
+  color: #606060;
+  width: 100px;
+  height: 30px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.language-select:hover{
+  color: #808080;
 }
 
-/* Responsive */
+/* ---------------------------Responsive ----------------------------------*/
 @media (max-width: 768px) {
   .footer-container,.copyright-container {
     flex-direction: column;
@@ -256,5 +384,8 @@ footer {
 
   .footer-column {
     width: 100%;
+  }
+  .copyright-container{
+    padding: 10px;
   }
 }
