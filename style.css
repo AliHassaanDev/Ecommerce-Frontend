@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  box-sizing: boarder-box;
+  box-sizing: border-box;
 }
 a{
   text-decoration: none;
@@ -10,105 +10,104 @@ a{
 body{
   background-color: #F7FAFC;
 }
-/*----------------------------top bar-----------------------------------*/
+/*------------------------------------------------top bar------------------------------------------------------*/
 .top-bar{
-  width:1440px;
+  width:100%;
   height:75px;
   display: flex;
+  align-items: center;
+  padding: 0vw 9vw;
   background-color: #ffffff;
   border-bottom: 1px solid #DEE2E7;
+  gap: 4vw;
 }
 /* ----------logo---------- */
 .logo{
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
-  width:150px;
   height:40px;
-  margin-left:115px;
-  margin-top: 20px;
+  width:auto;
+  gap :5px;
 }
 .logo:hover{
-  margin-top: 15px;
-  height:45px;
+  margin-top: -5px;
 }
-.brand-logo {
-  height: 40px;
+.brand-logo{
+  height:40px;
 }
 .brand-name{
   color: #8cb7f5;
-  font-size: 23px;
+  font-size: 26px;
   font-weight: bold;
-  margin-left: 5px;
 }
 /* ----------search bar---------- */
 .search-form {
+  flex: 1 1 auto;
   display: flex;
   align-items: center;
-  width: 583px;
-  height: 32px;
-  margin-top: 20px;
-  margin-left: 20px;
+  max-width: 665px;
+  height: 40px;
+  min-width: 300px;
+  margin: 0px 20px;
   border: 1.5px solid #0D6EFD;
   border-radius: 8px;
   overflow: hidden;
 }
 .search-form:hover{
   border: 2px solid #0D6EFD;
-  margin-left: 18.5px;
+  margin: 0px 19px;
 }
 #search {
+  flex: 2 1 auto;
   width: 100%;
   height: 100%;
   padding: 0 12px;
   border: none;
   font-size: 16px;
-  flex: 1 1 auto;
 }
 .search-select {
-  width: 125px;
+  flex: 0 0 125px;
   height: 100%;
   border: none;
   border-left: 1px solid #0067FF;
   padding: 0 10px;
   font-size: 14px;
-  flex-shrink: 0;
 }
 .search-select:hover{
   background-color: #EFF2F4;
 }
 .search-button {
-  width: 88px;
+  flex: 0 0 88px;
   height: 100%;
   background: linear-gradient(180deg, #127FFF 0%, #0067FF 100%);
   border: none;
   color: #ffffff;
   cursor: pointer;
   font-size: 14px;
-  flex-shrink: 0;
 }
 .search-button:hover{
   background: linear-gradient(40deg, #127FFF 0%, #0067FF 100%);
 }
 /*-------quick actions--------*/
 .actions {
+  flex: 0 0 auto;
   display: flex;
   gap: 16px;
-  margin-left: 80px;
+  min-width: 200px;
 }
 .actions a {
-  margin-top: 20px;
   height: 40px;
+  width: auto;
   font-size: 12px;
   color: #8B96A5;
   display: flex;
   flex-direction: column; 
   align-items: center;
-  justify-content: center;
   text-align: center;
-  vertical-align: middle;
 }
 .actions a:hover{
-  margin-top: 15px;
+  margin-top: -5px;
   height:45px;
 }
 .actions a img {
@@ -116,9 +115,9 @@ body{
   height: 20px;
   margin-bottom: 4px; 
 }
-/*----------------------------nav bar-----------------------------------*/
+/*------------------------------------------------------nav bar--------------------------------------------------------*/
 .navbar {
-  width: 1440px;
+  width: 100%;
   height: 50px;
   background-color: #ffffff;
   border-bottom: 1px solid #DEE2E7;
@@ -129,11 +128,11 @@ body{
 
 .nav-container {
   width: 100%;
-  padding-left: 115px;
-  padding-right: 250px;
+  padding: 0vw 9vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .nav-links {
@@ -141,6 +140,7 @@ body{
   align-items: center;
   gap: 20px;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .nav-links li a {
@@ -171,6 +171,7 @@ body{
 .selects {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .selects select {
@@ -180,19 +181,20 @@ body{
   cursor: pointer;
   margin-right: 30px;
 }
-/* -----------------------------------------------------------------main -------------------------------------------------*/
+/* --------------------------------------------------------main --------------------------------------------------------------*/
 
-/* ------------------------------main-section ------------------------------*/
+/* ---------------------------------------main-section --------------------------------------*/
 .main-section{
-  margin:20px 115px;
+  margin:20px 9vw;
   padding: 20px;
   background-color: #ffffff;
   border:1px solid #DEE2E7;
   border-radius: 6px;
-  height:360px;
   display: flex;
   gap:10px;
+  flex-wrap: wrap; 
 }
+/* --------Category bar---------*/
 .main-categories ul{
   list-style: none;
 }
@@ -202,7 +204,7 @@ body{
   font-weight: 400;
   display: block;
   height: 40px;
-  width: 200px;
+  width:200px;
   align-content: center;
   border-radius: 6px;
   overflow: hidden;
@@ -213,13 +215,41 @@ body{
   font-weight: 500;
   color:#1c1c1c;
 }
+/* --------main banner---------*/
 .main-banner{
   background-image: url('Asserts/main-banner-bg.png');
   background-size:cover;
   background-position: center;
-  width:665px;
+  flex:1 1 500px;
+  max-width: 665px;
   height:360px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 60px 40px;
+  gap: 5px;
 }
+.main-banner span{
+font-size: 28px;
+}
+.main-banner strong{
+font-size: 32px;
+line-height: 100%;
+}
+.main-banner button{
+width: 120px;
+height: 40px;
+border-radius: 6px;
+border: none;
+box-shadow: 0px 1px 2px 0px #38383814;
+font-size: 16px;
+margin-top:10px;
+}
+.main-banner button:hover{
+  height:38px;
+  width:118px;
+}
+/* --------User section---------*/
 .main-user{
  display:flex;
  flex-direction: column;
@@ -229,16 +259,38 @@ body{
 .user-account{
   display:flex;
   flex-direction: column;
-  height:150px;
   background-color: #E3F0FF;
   border-radius: 6px;
+  padding: 10px;
+  gap:10px;
+}
+.user-account button{
+  height:30px;
+  border-radius: 6px;
+  border: 1px solid #DEE2E7;
+  background-color: #fff;
+  color: #0D6EFD;
+  font-weight: 500;
+}
+.user-account button:hover{
+ color: #fff;
+ background: linear-gradient(180deg, #127FFF 0%, #0067FF 100%);
+}
+.account-profile{
+  display:flex;
+  gap:10px;
+  font-size: 16px;
+  align-items: center;
+}
+.account-profile img {
+  width:44px;
+  height:44px;
 }
 .discount{
   background-color: #F38332;
   color:#ffffff;
   border-radius: 6px;
   font-size: 16px;
-  height:100px;
   padding: 20px;
   align-content: center;
 }
@@ -247,11 +299,116 @@ body{
   color:#ffffff;
   font-size: 16px;
   border-radius: 6px;
-  height:100px;
   padding: 20px;
   align-content: center;
 }
-/* ------------------------------footer ------------------------------*/
+/* ---------------------------------------sale-section --------------------------------------*/
+.sale-section{
+  margin:20px 9vw;
+  background-color: #fff;
+  border:1px solid #DEE2E7;
+  border-radius: 6px;
+  display: flex;
+  gap:10px;
+  flex-wrap: wrap; 
+}
+.sale-deadline {
+  padding: 20px;
+  min-width: 200px;
+  flex: 1 1 80px;  
+}
+.sale-deadline strong{
+  font-weight: 600;
+  font-size: 20px;
+  color: #1C1C1C;
+
+}
+.sale-deadline p{
+  font-weight: 400;
+  font-size: 16px;
+  color: #8B96A5;
+}
+.countdown{
+  display:flex;
+  gap :5px;
+  margin-top: 20px;
+  width:auto;
+}
+.time{
+  background-color: #606060;
+  display: flex;
+  flex-direction: column;
+  width:45px;
+  height:50px;
+  color:#fff;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+}
+.time-digit{
+  font-weight: 700;
+  font-size: 16px;
+}
+.time-type{
+  font-weight: 400;
+  font-size: 12px;
+}
+.sale-items{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 3 1 400px;
+}
+.item-on-sale:hover{
+  border:2px solid #DEE2E7;
+}
+.item-on-sale{
+  border-left: 1px solid #E0E0E0;
+  width:158px;
+  height:235px;
+  padding:10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.image-box{
+  width:130px;
+  height:130px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.image-box img{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.item-name{
+  margin-top: 10px;
+  color:#1c1c1c;
+}
+.discount-rate{
+  margin-top: 10px;
+  background-color: #FFE3E3;
+  color:#EB001B;
+  font-weight: 500;
+  width:60px;
+  height:28px;
+  border-radius: 29px;
+  text-align: center;
+  align-content: center;
+}
+/* ---------------------------------------item-section --------------------------------------*/
+.item-section{
+  margin:20px 9vw;
+  background-color: #fff;
+  border:1px solid #DEE2E7;
+  border-radius: 6px;
+  display: flex;
+  gap:10px;
+  flex-wrap: wrap; 
+}
+/* ----------------------------------------------------------footer ------------------------------------------------------------*/
 footer {
   background-color: #ffffff;
   max-width: 1440px;
@@ -375,7 +532,73 @@ footer {
 }
 
 /* ---------------------------Responsive ----------------------------------*/
+@media (max-width: 1224px) {
+  .main-banner{
+    order: 1;
+    flex: 1 1 100%; 
+    max-width: 100%;
+  }
+  .main-categories{
+    order: 2;
+    flex: 1 1 40%; 
+    max-width: 50%;
+  }
+  .main-categories ul li a{
+    width:100%;
+  }
+  .main-user{
+    order: 3;
+    flex: 1 1 40%; 
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 1024px) {
+ .top-bar {
+    flex-wrap: wrap;
+    height: auto;
+    gap: 10px;
+    padding-top:20px;
+    padding-bottom: 20px;
+  }
+
+  .search-form {
+    order: 3;
+    flex: 1 1 100%;
+  }
+
+  .actions {
+    order: 2;
+    flex: 1 1 auto;
+    justify-content: flex-end;
+  }
+
+  .navbar {
+    height: auto;
+  }
+  .nav-container {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+  .selects {
+    margin-top: 10px;
+    justify-content: center;
+  }
+  .nav-links {    
+    justify-content: center;
+    gap: 15px;
+  }
+ .sale-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .sale-items{
+    justify-content: center;
+  }
+}
 @media (max-width: 768px) {
+  
   .footer-container,.copyright-container {
     flex-direction: column;
     align-items: flex-start;
@@ -388,4 +611,6 @@ footer {
   .copyright-container{
     padding: 10px;
   }
+
 }
+
