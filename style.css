@@ -450,6 +450,7 @@ margin-top:10px;
 .item-category button:hover{
   height: 38px;
   width:120px;
+ 
 }
 .category-items{
   display: flex;
@@ -677,7 +678,7 @@ margin-top:10px;
 
 .btn-logo {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 80%;
   transform: translateX(-50%);
   border-radius: 50%;
