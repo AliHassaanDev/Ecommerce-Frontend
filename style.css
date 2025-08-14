@@ -11,6 +11,13 @@ body{
   background-color: #F7FAFC;
 }
 /*------------------------------------------------top bar------------------------------------------------------*/
+header{
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
 .top-bar{
   width:100%;
   height:75px;
@@ -182,7 +189,9 @@ body{
   margin-right: 30px;
 }
 /* --------------------------------------------------------main --------------------------------------------------------------*/
-
+body{
+  padding-top: 125px;
+}
 /* ---------------------------------------main-section --------------------------------------*/
 .main-section{
   margin:20px 9vw;
@@ -625,6 +634,76 @@ margin-top:10px;
   width:28px;
   height: 20px;
 }
+/* ---------------------------------------services-section --------------------------------------*/
+.services-section {
+  margin: 20px 9vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.services-section h3{
+  font-size: 24px;
+  font-weight: 600;
+  color: #1c1c1c;
+}
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.each-service {
+  border: 1px solid #E0E0E0;
+  border-radius: 6px;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+  width: 245px;
+}
+
+.service-image {
+  height: 110px;
+  background-color: #D3D3D3;
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
+}
+
+.each-service p {
+  padding: 20px;
+  margin: 0;
+}
+
+.btn-logo {
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  border: 2px solid #fff;
+  background-color: #D1E7FF;
+  background-size: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.btn-logo:hover {
+  box-shadow: 0 2px 2px #5ab9d8;
+}
+
+.service1 .service-image { background-image: url(Asserts/service-1.png); }
+.service2 .service-image { background-image: url(Asserts/service-2.png); }
+.service3 .service-image { background-image: url(Asserts/service-3.png); }
+.service4 .service-image { background-image: url(Asserts/service-4.png); }
+
+.logo1 { background-image: url(Asserts/search-logo.svg); }
+.logo2 { background-image: url(Asserts/shop-logo.svg); }
+.logo3 { background-image: url(Asserts/sent-logo.svg); }
+.logo4 { background-image: url(Asserts/sheild-logo.svg); }
+
 /* ---------------------------------------country-section --------------------------------------*/
 .country-section{
   margin:20px 9vw;
@@ -664,6 +743,10 @@ margin-top:10px;
   gap: 10px;
 }
 #newsletter-email{
+  background: url('Asserts/mail-logo.svg') no-repeat 8px center;
+  background-color: #fff;
+  background-size: 20px;
+  padding-left: 35px; 
   flex:1 0 280px;
 }
 /* ----------------------------------------------------------footer ------------------------------------------------------------*/
@@ -815,6 +898,9 @@ footer {
 }
 
 @media (max-width: 1024px) {
+  body{
+  padding-top: 195px;
+}
  .top-bar {
     flex-wrap: wrap;
     height: auto;
@@ -859,7 +945,9 @@ footer {
   }
 }
 @media (max-width: 768px) {
-  
+  body{
+  padding-top: 225px;
+  }
   .footer-container,.copyright-container {
     flex-direction: column;
     align-items: flex-start;
@@ -874,4 +962,3 @@ footer {
   }
 
 }
-
